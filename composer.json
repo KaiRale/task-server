@@ -1,0 +1,12 @@
+{
+    "name": "web/frontcontroller",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Web\\FrontController\\": "src/"
+        }
+    }
+}

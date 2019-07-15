@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME}% !-f
+RewriteCond %{REQUEST_FILENAME}% !-d
+RewriteCond %{REQUEST_URI}% !^/img/
+RewriteCond %{REQUEST_URI}% !^/css/
+RewriteCond %{REQUEST_URI}% !^/js/
+
+RewriteRule ^(.*)$ index.php [L,QSA]
+  # L остановить процесс преобразования на этой строчке
+#    и не выполнять последующие за ней преобразования адреса
+
+#QSA - строка запроса ($_GET). Если не указать, то потеряется
+</IfModule>
